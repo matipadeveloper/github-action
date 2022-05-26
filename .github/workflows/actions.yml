@@ -12,9 +12,11 @@ on:
 jobs: 
   run-github-actions:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+        continue-on-error: true
       - name: List files
         run: |
           pwd 
