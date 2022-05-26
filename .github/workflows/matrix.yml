@@ -1,14 +1,21 @@
 name: Matrix
 
-on: push
+on: pull_request
 
 jobs:
   node-version:
     strategy:
       matrix: 
         os: [macos-latest, ubuntu-latest, windows-latest]
-        node_version: [6,8,10]      
-    runs-on: ubuntu-latest
+        node_version: [6,8,10] 
+        exclude: 
+          - os: ubuntu-latest
+            node_version: 8
+        include:
+          - os: ubuntu-latest
+            node_version: 8
+            is_ubuntu_8: "true"
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Log node version
         run: node -v
