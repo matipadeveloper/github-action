@@ -1,0 +1,18 @@
+name: Ali
+age: 28
+active: true
+key:
+    key: value
+    key: value
+    key: 
+        key: value
+array:
+    - item1
+    - item2
+jsonArray: [item1,item2]
+longText: >
+      Long 
+      Nw
+      LMe
+      lakemf
+      welkfm
