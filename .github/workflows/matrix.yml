@@ -3,8 +3,8 @@ name: Matrix
 on: push
 
 jobs:
-  runs-on: ubuntu-latest
   node-version:
+    runs-on: ubuntu-latest
     steps:
       - name: Log node version
         run: node -v
