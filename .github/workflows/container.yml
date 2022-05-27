@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     services: 
         app:
-        image: matipadocker/node-image
-        ports:
-          - "3001:3000"
+          image: matipadocker/node-image
+          ports:
+            - "3001:3000"
         mongo:
           image: mongo
           ports:
